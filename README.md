@@ -27,11 +27,10 @@ Este notebook utiliza o Selenium para fazer o web scraping de artigos do Globo q
 
 * O script utiliza o modo headless do Selenium para executar o navegador em segundo plano.
 * A data limite para coleta de artigos pode ser ajustada na variável `data_limite`.
-* O BeautifulSoup não é utilizado neste script, mas pode ser uma adição para futuras melhorias na extração de resumos.
 
 **2. trabalho_final_web_mining_e_crawler_scraping.ipynb**
 
-Este notebook analisa os dados coletados no notebook anterior para identificar tendências e padrões na cobertura da Petrobras pelo Globo. Ele utiliza técnicas de mineração de texto e análise de sentimentos para extrair insights dos dados.
+Neste notebook, analisamos os dados coletados anteriormente para encontrar tendências e padrões na cobertura da Petrobras pelo Globo. Utilizamos técnicas para extrair informações importantes dos dados.
 
 **Funcionalidades:**
 
@@ -67,4 +66,3 @@ Este notebook analisa os dados coletados no notebook anterior para identificar t
 
 * A análise da relação entre o preço das ações e a quantidade de notícias é exploratória e não fornece conclusões definitivas.
 * A identificação de notícias relevantes é subjetiva e depende da análise manual das notícias.
-* O script pode ser aprimorado com técnicas
