@@ -11,7 +11,7 @@ Este notebook utiliza o Selenium para fazer o web scraping de artigos do Globo q
 * Simulação de um navegador para acessar a página do Globo sobre a Petrobras.
 * Extração de títulos, datas de publicação, resumos e links de artigos do Globo que mencionam a Petrobras.
 * Verificação da data limite para coletar artigos publicados a partir de uma data específica (**ajustável na variável `data_limite`**).
-* Armazenamento dos dados coletados em um arquivo Excel (`dados2.xlsx`) na pasta `output`.
+* Armazenamento dos dados coletados em um arquivo Excel (`dados.xlsx`) na pasta `output`.
 
 **Pré-requisitos:**
 
@@ -21,7 +21,7 @@ Este notebook utiliza o Selenium para fazer o web scraping de artigos do Globo q
 
 1. Instale as bibliotecas necessárias (`pip install selenium pandas webdriver-manager datetime`).
 2. Execute o notebook `web_scraping_globo_petrobras.ipynb` no Jupyter Notebook.
-3. O arquivo Excel com os dados coletados será salvo na pasta `output/dados2.xlsx`.
+3. O arquivo Excel com os dados coletados será salvo na pasta `output/dados.xlsx`.
 
 **Observações:**
 
@@ -54,12 +54,12 @@ Este notebook analisa os dados coletados no notebook anterior para identificar t
 **Pré-requisitos:**
 
 * Ter o Python instalado com as bibliotecas pandas, yfinance, matplotlib, numpy e datetime.
-* Ter os dados coletados no notebook `web_scraping_globo_petrobras.ipynb` armazenados em um arquivo Excel (`dados2.xlsx`) na pasta `output`.
+* Ter os dados coletados no notebook `web_scraping_globo_petrobras.ipynb` armazenados em um arquivo Excel (`dados.xlsx`) na pasta `output`.
 
 **Como executar:**
 
 1. Instale as bibliotecas necessárias (`pip install yfinance matplotlib numpy`).
-2. Certifique-se de que o arquivo `dados2.xlsx` está na pasta `output`.
+2. Certifique-se de que o arquivo `dados.xlsx` está na pasta `output`.
 3. Execute o notebook `trabalho_final_web_mining_e_crawler_scraping.ipynb` no Jupyter Notebook.
 4. Analise os resultados e as notícias listadas para identificar possíveis relações entre a cobertura da imprensa e o preço das ações da Petrobras.
 
