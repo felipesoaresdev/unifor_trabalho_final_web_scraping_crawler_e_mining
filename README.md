@@ -1,59 +1,70 @@
+## Leia-me: Análise da Cobertura da Imprensa da Petrobras no Globo (Atualizado)
 
-## Web Scraping notícias do G1 sobre Petrobras
+Este repositório contém dois notebooks Jupyter que realizam web scraping e análise de dados sobre a cobertura da Petrobras no jornal O Globo.
 
-Este repositório contém um script Python para coletar dados de notícias sobre a Petrobras do portal G1.
+**1. web_scraping_globo_petrobras.ipynb**
 
-### Pré-requisitos
+Este notebook utiliza o Selenium para fazer o web scraping de artigos do Globo que mencionam a Petrobras. Ele simula o comportamento de um navegador para interagir com a página e extrai informações como título, data de publicação, resumo e link para o artigo completo. Os dados coletados são armazenados em um arquivo Excel na pasta `output`.
 
--   Python 3.x
--   Bibliotecas:
-    -   selenium
-    -   beautifulsoup4
-    -   webdriver_manager
-    -   pandas
-    -   requests
--   Navegador Google Chrome (necessário para executar o script)
+**Funcionalidades:**
 
-### Instalação das dependências
+* Simulação de um navegador para acessar a página do Globo sobre a Petrobras.
+* Extração de títulos, datas de publicação, resumos e links de artigos do Globo que mencionam a Petrobras.
+* Verificação da data limite para coletar artigos publicados a partir de uma data específica (**ajustável na variável `data_limite`**).
+* Armazenamento dos dados coletados em um arquivo Excel (`dados2.xlsx`) na pasta `output`.
 
-Você pode instalar as bibliotecas necessárias usando o comando `pip`:
+**Pré-requisitos:**
 
-Bash
+* Ter o Python instalado com as bibliotecas Selenium, pandas, webdriver_manager e datetime.
 
-```
-pip install selenium beautifulsoup4 webdriver-manager pandas requests
+**Como executar:**
 
-```
+1. Instale as bibliotecas necessárias (`pip install selenium pandas webdriver-manager datetime`).
+2. Execute o notebook `web_scraping_globo_petrobras.ipynb` no Jupyter Notebook.
+3. O arquivo Excel com os dados coletados será salvo na pasta `output/dados2.xlsx`.
 
-### Como funciona o script
+**Observações:**
 
-O script utiliza a biblioteca Selenium para abrir o navegador Chrome em modo headless (sem interface gráfica) e acessar a página inicial de notícias sobre a Petrobras no G1. Em seguida, ele percorre a lista de notícias e extrai os seguintes dados de cada uma:
+* O script utiliza o modo headless do Selenium para executar o navegador em segundo plano.
+* A data limite para coleta de artigos pode ser ajustada na variável `data_limite`.
+* O BeautifulSoup não é utilizado neste script, mas pode ser uma adição para futuras melhorias na extração de resumos.
 
--   Título
--   Link
--   Data de publicação (se disponível)
+**2. trabalho_final_web_mining_e_crawler_scraping.ipynb**
 
-O script continua carregando novas páginas até encontrar uma notícia publicada antes de uma data limite definida (por padrão, 01/01/2022).
+Este notebook analisa os dados coletados no notebook anterior para identificar tendências e padrões na cobertura da Petrobras pelo Globo. Ele utiliza técnicas de mineração de texto e análise de sentimentos para extrair insights dos dados.
 
-Após coletar os dados, o script cria um DataFrame do Pandas e salva as informações em um arquivo Excel chamado "dados.xlsx".
+**Funcionalidades:**
 
-### Executando o script
+* **Análise da frequência de notícias por dia:**
+    * Agrupa as notícias por dia e conta quantas notícias foram publicadas em cada dia.
+    * Identifica os dias com maior e menor número de notícias.
+* **Análise da relação entre o preço das ações da Petrobras e a quantidade de notícias:**
+    * Obtém os dados históricos do preço das ações da Petrobras (PETR4) do Yahoo Finance.
+    * Mescla os dados de notícias com os dados históricos do preço das ações.
+    * Calcula a variação percentual do preço das ações em relação ao dia anterior.
+    * Identifica os dias com mudanças significativas no preço das ações (acima de um limite definido).
+    * Analisa as notícias publicadas nos dias anteriores às mudanças significativas para identificar possíveis fatores que influenciaram o preço das ações.
+* **Visualização dos resultados:**
+    * Cria um gráfico que mostra o preço de fechamento das ações da Petrobras e a quantidade de notícias por dia.
+    * Destaca os pontos de mudança significativa no preço das ações no gráfico.
+* **Identificação de notícias relevantes:**
+    * Lista as notícias publicadas nos cinco dias anteriores a cada ponto de mudança significativa no preço das ações.
+    * Permite a análise manual das notícias para identificar se elas podem ter impactado o preço das ações.
 
-1.  Salve o script como um arquivo Python (por exemplo, coletar_noticias_petrobras.py).
-2.  Abra um terminal ou prompt de comando e navegue até o diretório onde salvou o script.
-3.  Execute o script usando o seguinte comando:
+**Pré-requisitos:**
 
-Bash
+* Ter o Python instalado com as bibliotecas pandas, yfinance, matplotlib, numpy e datetime.
+* Ter os dados coletados no notebook `web_scraping_globo_petrobras.ipynb` armazenados em um arquivo Excel (`dados2.xlsx`) na pasta `output`.
 
-```
-python coletar_noticias_petrobras.py
+**Como executar:**
 
-```
+1. Instale as bibliotecas necessárias (`pip install yfinance matplotlib numpy`).
+2. Certifique-se de que o arquivo `dados2.xlsx` está na pasta `output`.
+3. Execute o notebook `trabalho_final_web_mining_e_crawler_scraping.ipynb` no Jupyter Notebook.
+4. Analise os resultados e as notícias listadas para identificar possíveis relações entre a cobertura da imprensa e o preço das ações da Petrobras.
 
-### Arquivo de saída
+**Observações:**
 
-O script irá gerar um arquivo Excel chamado "dados.xlsx" contendo os dados coletados das notícias sobre a Petrobras.
-
-### Licença
-
-Este script é fornecido como exemplo e pode ser usado ou modificado de acordo com a sua necessidade.
+* A análise da relação entre o preço das ações e a quantidade de notícias é exploratória e não fornece conclusões definitivas.
+* A identificação de notícias relevantes é subjetiva e depende da análise manual das notícias.
+* O script pode ser aprimorado com técnicas
