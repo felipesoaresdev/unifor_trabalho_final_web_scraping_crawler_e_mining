@@ -1,6 +1,38 @@
-## Leia-me: Análise da Cobertura da Imprensa da Petrobras no Globo (Atualizado)
+## Análise da Cobertura da Imprensa da Petrobras no Globo: Web Scraping e Mineração de Texto
 
-Este repositório contém dois notebooks Jupyter que realizam web scraping e análise de dados sobre a cobertura da Petrobras no jornal O Globo.
+**Objetivo:**
+
+Desenvolver uma ferramenta para coletar e analisar dados sobre a cobertura da Petrobras no jornal O Globo, utilizando técnicas de web scraping e mineração de texto.
+
+**Etapas:**
+
+1. **Coleta de dados ):**
+    * Implementar um scraper em Python para extrair títulos, datas de publicação, resumos e links de artigos do Globo que mencionam a Petrobras.
+    * Utilizar as bibliotecas Selenium e BeautifulSoup para simular o comportamento de um navegador e extrair as informações relevantes.
+    * Armazenar os dados coletados em um arquivo Excel.
+
+2. **Recuperação de informação :**
+    * Analisar os dados coletados para identificar tendências e padrões na cobertura da Petrobras.
+    * Explorar a relação entre o preço das ações da Petrobras e a quantidade de notícias publicadas.
+    * Visualizar os resultados em gráficos e tabelas.
+    * Identificar notícias relevantes que podem ter impactado o preço das ações.
+
+**Ferramentas:**
+
+* Python
+* Selenium
+* BeautifulSoup
+* Pandas
+* yfinance (opcional)
+* Matplotlib (opcional)
+
+**Resultados:**
+
+* Arquivo Excel com os dados coletados (**output/dados2.xlsx**).
+* Gráfico mostrando o preço de fechamento das ações da Petrobras e a quantidade de notícias por dia.
+* Lista de notícias publicadas nos cinco dias anteriores a cada ponto de mudança significativa no preço das ações.
+
+**Instruções para execução:**
 
 **1. web_scraping_globo_petrobras.ipynb**
 
