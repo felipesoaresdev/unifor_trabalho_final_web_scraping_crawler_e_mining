@@ -1,3 +1,6 @@
+#UNIFOR - PÓS-GRADUAÇÃO EM ENGENHARIA DE DADOS
+##Projeto final disciplina: Web mining e Crawler Scraping
+
 ## Análise da Cobertura da Imprensa da Petrobras no Globo: Web Scraping e Mineração de Texto
 
 **Objetivo:**
@@ -8,7 +11,7 @@ Desenvolver uma ferramenta para coletar e analisar dados sobre a cobertura da Pe
 
 1. **Coleta de dados ):**
     * Implementar um scraper em Python para extrair títulos, datas de publicação, resumos e links de artigos do Globo que mencionam a Petrobras.
-    * Utilizar as bibliotecas Selenium e BeautifulSoup para simular o comportamento de um navegador e extrair as informações relevantes.
+    * Utilizar as bibliotecas Selenium para simular o comportamento de um navegador e extrair as informações relevantes.
     * Armazenar os dados coletados em um arquivo Excel.
 
 2. **Recuperação de informação :**
@@ -21,10 +24,9 @@ Desenvolver uma ferramenta para coletar e analisar dados sobre a cobertura da Pe
 
 * Python
 * Selenium
-* BeautifulSoup
 * Pandas
-* yfinance (opcional)
-* Matplotlib (opcional)
+* yfinance 
+* Matplotlib 
 
 **Resultados:**
 
