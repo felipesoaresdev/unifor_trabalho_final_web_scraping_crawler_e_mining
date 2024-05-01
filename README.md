@@ -59,7 +59,7 @@ Desenvolver uma ferramenta para coletar e analisar dados sobre a cobertura da Pe
 
   
 
-* Arquivo Excel com os dados coletados (**output/dados2.xlsx**).
+* Arquivo Excel com os dados coletados (**output/dados.xlsx**).
 
 * Gráfico mostrando o preço de fechamento das ações da Petrobras e a quantidade de notícias por dia.
 
