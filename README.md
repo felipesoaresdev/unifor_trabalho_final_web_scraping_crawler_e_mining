@@ -20,14 +20,11 @@ Desenvolver uma ferramenta para coletar e analisar dados sobre a cobertura da Pe
 
   
 
-1.  **Coleta de dados ):**
+1.  **Coleta de dados :**
 
 	* Implementar um scraper em Python para extrair títulos, datas de publicação, resumos e links de artigos do Globo que mencionam a Petrobras.
 
-	* Utilizar as bibliotecas Selenium para simular o comportamento de um navegador e extrair as informações relevantes.
-
 	* Armazenar os dados coletados em um arquivo Excel.
-
   
 
 2.  **Recuperação de informação :**
